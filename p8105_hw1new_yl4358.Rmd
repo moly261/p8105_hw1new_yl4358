@@ -58,3 +58,8 @@ second_df = tibble(
 
 ```
 
+* The dataset has `r nrow(second_df)` rows and `r ncol(second_df)` columns.
+
+* The mean, median and standard deviation of x is `r mean(pull(second_df, x))`, `r median(pull(second_df, x))` and `r sd(pull(second_df, x))`.
+
+* The proportion of cases for which x + y > 1 is `r sum(pull(second_df, vec_num))/length(pull(second_df, vec_num))`.
