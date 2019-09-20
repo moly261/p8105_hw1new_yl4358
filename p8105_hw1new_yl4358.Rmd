@@ -41,3 +41,20 @@ as.numeric(as.factor(pull(first_df, vec_log))) * pull(first_df, sample)
 
 * We find that factor vector cannot do operation while the numeric can. This explain that we cannot take the mean of character vector and factor vector.
 
+
+# Problem 2
+
+Here we create a data frame as instructed in the problem 2.
+
+```{r pb2_create_df}
+
+second_df = tibble(
+  x = rnorm(500),
+  y = rnorm(500),
+  vec_log2 = (x + y) > 1,
+  vec_num = as.numeric(vec_log2),
+  vec_factor = as.factor(vec_log2)
+)
+
+```
+
