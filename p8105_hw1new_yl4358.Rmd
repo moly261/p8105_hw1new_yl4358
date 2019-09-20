@@ -20,3 +20,10 @@ first_df = tibble(
 )
 ```
 
+* The mean of the sample is `r mean(pull(first_df, sample))`.
+
+* The mean of vec_log is `r mean(pull(first_df, vec_log))`.
+
+* We can't take the mean of character vector and factor vector.
+
+
