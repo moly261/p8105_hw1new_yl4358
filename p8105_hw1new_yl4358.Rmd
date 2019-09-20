@@ -10,6 +10,7 @@ output: github_document
 Here we create a data frame as instructed in the problem 1.
 
 ```{r pb1_create_df}
+
 library(tidyverse)
 
 first_df = tibble(
@@ -26,4 +27,17 @@ first_df = tibble(
 
 * We can't take the mean of character vector and factor vector.
 
+
+
+Here we convert variables from one type to another.
+
+```{r pb1_convert_var_type, eval=FALSE}
+
+as.numeric(pull(first_df, vec_log)) * pull(first_df, sample)
+as.factor(pull(first_df, vec_log)) * pull(first_df, sample)
+as.numeric(as.factor(pull(first_df, vec_log))) * pull(first_df, sample)
+
+```
+
+* We find that factor vector cannot do operation while the numeric can. This explain that we cannot take the mean of character vector and factor vector.
 
