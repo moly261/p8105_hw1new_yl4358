@@ -5,3 +5,18 @@ date: "9/20/2019"
 output: github_document
 ---
 
+# Problem 1
+
+Here we create a data frame as instructed in the problem 1.
+
+```{r pb1_create_df}
+library(tidyverse)
+
+first_df = tibble(
+  sample = rnorm(8),
+  vec_log = sample > 0,
+  vec_char = c("My", "name", "is", "YI", "LIU", "and", "study", "biostatistics"),
+  vec_factor = factor(c("high", "medium", "low", "high", "medium", "low", "low", "low"))
+)
+```
+
