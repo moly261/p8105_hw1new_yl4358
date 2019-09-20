@@ -69,10 +69,11 @@ Here we make scatterplots!
 
 ```{r pb2_scatterplots}
 
-ggplot(second_df, aes(x = x, y = y, color = "y vs x")) + geom_point()
+ggplot(second_df, aes(x = x, y = y, color = vec_log2)) + geom_point()
 ggsave("hw1new_plot1_yl4358.pdf")
-ggplot(second_df, aes(x = x, y = vec_num, color = "vec_num vs x")) + geom_point()
-ggplot(second_df, aes(x = x, y = vec_factor, color = "vec_factor vs x")) + geom_point()
+ggplot(second_df, aes(x = x, y = y, color = vec_num)) + geom_point()
+ggplot(second_df, aes(x = x, y = y, color = vec_factor)) + geom_point()
 
 ```
 
+* The color scale of the first plots is numeric, as logical variables and factor variables both use FALSE/TRUE for color scales while the color scales of numeric variables are numeric.
